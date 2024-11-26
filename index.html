@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EMI CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,39 +17,44 @@
             <form action="#">
                 <div class="group">
                     <div class="title">Amount</div>
-                    <input type="text" value="300000" class="loan-amount" />
+                    <input type="number" placeholder="Enter loan amount" class="loan-amount" id="loanAmount" />
                 </div>
 
                 <div class="group">
                     <div class="title">Rate of Interest</div>
-                    <input type="text" value="7.5" class="interest-rate" />
+                    <input type="number" value="5" class="interest-rate" id="interestRate" />
                 </div>
 
                 <div class="group">
                     <div class="title">No of Months</div>
-                    <input type="text" value="12" class="loan-tenure" />
+                    <input type="number" placeholder="Enter number of months" class="loan-tenure" id="tenure" />
                 </div>
             </form>
+
+            <!-- Warning message for invalid inputs -->
+            <div class="warning-message" style="color: red; display: none;"></div>
         </div>
 
         <div class="result">
             <div class="left">
                 <div class="loan-emi">
                     <h3>Loan EMI</h3>
-                    <div class="value">100</div>
+                    <div class="value">0</div>
                 </div>
 
                 <div class="total-interest">
                     <h3>Total Interest</h3>
-                    <div class="value">123</div>
+                    <div class="value">0</div>
                 </div>
 
                 <div class="total-amount">
                     <h3>Total Payable Amount</h3>
-                    <div class="value">2346</div>
+                    <div class="value">0</div>
                 </div>
 
                 <button class="calc-button">Calculate</button>
+                <!-- Refresh Button -->
+                <button class="refresh-button">Refresh</button>
             </div>
         </div>
 
